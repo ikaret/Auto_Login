@@ -1,0 +1,15 @@
+{
+	"URL_home":"http://no1.kt.com",
+	"URL_login":"http://no1.kt.com/login",
+	"URL_login_proc":"http://no1.kt.com/login_proc",
+	"URL_pages":"http://no1.kt.com/detail/",
+	"URL_like":"http://no1.kt.com/like",
+	"URL_share":"http://no1.kt.com/share",
+	"request_headers":{
+		"accept": "application/json, text/javascript, */*; q=0.01",
+		"origin": "http://no1.kt.com",
+		"x-requested-with": "XMLHttpRequest",
+		"user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+		"content-type": "application/x-www-form-urlencoded"
+	}
+}
