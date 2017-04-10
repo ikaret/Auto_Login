@@ -1,4 +1,4 @@
-import PyV8
+import pyv8
 import urllib2
 
 def enc_data(secret,key,iv):
