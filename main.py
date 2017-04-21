@@ -24,6 +24,7 @@ else:
     print("Wrong Param!!")
     exit()
 
+
 contents_num_init= int(config.get(section,'contents_num_init'))
 init_date = datetime(int(config.get(section,'init_date_year')),\
     int(config.get(section,'init_date_month')),\
