@@ -24,6 +24,7 @@ else:
     print("Wrong Param!!")
     exit()
 
+
 contents_num_init= int(config.get(section,'contents_num_init'))
 init_date = datetime(int(config.get(section,'init_date_year')),\
     int(config.get(section,'init_date_month')),\
@@ -89,21 +90,14 @@ if response.json().get('flag') == 'ok':
         if (like_cnt >= limit_page and share_cnt >= limit_page) :
             break
         else :
+            request_headers['referer'] = URL_pages + str(page_idx)
             print("URL : "+request_headers['referer'])
 
-            request_headers['referer'] = URL_pages + str(page_idx)
             like_data = {'idx':str(page_idx)}
             requests.request("POST", URL_like, data=like_data, headers=request_headers)
-            #response = requests.request("POST", URL_like, data=like_data, headers=request_headers)
-            #print(request_headers)
-            #print(response.text)
 
             share_data = {'idx':str(page_idx), 'sns':'twitter'}
             requests.request("POST", URL_share, data=share_data, headers=request_headers)
-            #response = requests.request("POST", URL_share, data=share_data, headers=request_headers)
-            #print(request_headers)
-            #print(response.text)
-
 
             page_idx += 1
 
